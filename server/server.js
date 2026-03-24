@@ -36,9 +36,9 @@ initSocket(io)
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('✅ MongoDB Connected')
+    console.log('MongoDB Connected')
     httpServer.listen(process.env.PORT, () =>
-      console.log(`🚀 Server on port ${process.env.PORT}`)
+      console.log(`Server on port ${process.env.PORT}`)
     )
   })
-  .catch(err => console.error('❌ DB Error:', err))
+  .catch(err => console.error('DB Error:', err))
